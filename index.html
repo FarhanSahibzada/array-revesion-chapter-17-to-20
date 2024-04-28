@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array and Loops</h2>
+
+
+
+<script>
+
+
+//       1 task 
+
+// Declare and initialize an empty multidimensional array.
+// (Array of arrays)
+
+let emptyArray = [[]]; 
+
+
+
+
+
+
+
+
+// //                    task 2
+ 
+//  Declare and initialize a multidimensional array
+// representing the following matrix:
+
+
+
+let multi = [ [0,1,2,3],[1,0,1,2] ,[2,1,0,1]]
+
+
+for (let char of multi){
+
+
+    document.write( "<h2>"+char.join(" ") +"<br></h2>");
+}
+
+document.write("<hr>")
+
+
+
+
+  ////                   task3
+
+
+ for (let i = 0 ; i <= 10 ; i++){
+
+
+    document.write(`<h2> ${i}<br> </h2>`)
+ }
+
+document.write("<hr>")
+
+//// task 4
+
+
+let user1 = parseInt(prompt("Enter any Nuber Of Table!"));
+
+
+
+
+if ( user1 > 1){
+    
+    let tablelength = parseInt(prompt("how length you want on table!"));
+
+for (let j = 1 ; j <= tablelength ;j++){
+
+document.write(`<h2> ${user1} x ${j} = ${user1*j} <br></h2>`)
+
+}
+}else{
+
+    alert("Good bye")
+}
+
+
+document.write("<hr>")
+
+
+
+//// task 5
+
+let fruits = ["apple", "banana", "mango", "orange","strawberry"];
+
+for(let n = 0 ; n < fruits.length ; n++){
+
+
+document.write(` <h2>Element at index ${n} is ${fruits[n]} <br></h2>`)
+
+
+}
+document.write("<hr>")
+
+
+////             task 6
+
+
+
+let arr = [1,2,3,4,5,6,7,8,9,10];
+
+document.write("<h4>Counting: <br><br></h4>")
+for( let l=0 ; l<arr.length ; l++){
+
+
+document.write(`<b> ${arr[l]} </b>`)
+
+}
+
+let reversr = arr ;
+
+
+let reversr2 = [];
+let Count = 0 ;
+
+for( let q = reversr.length-1 ; q >= 0 ; q-- ){
+
+reversr2[Count++] = reversr[q] ;
+
+
+
+}
+
+document.write(`<h4>reverse: <br><br> ${reversr2}</h4>`);
+
+
+let numbers = arr ;
+
+let even = [];
+let odd = [];
+let series = [];
+for(let i = 0 ; i< numbers.length ; i++){
+
+
+if (numbers[i]%2 === 0){
+
+    even.push(numbers[i])
+series.push(numbers[i]+ "k")
+}
+else if(numbers[i]%3 === 0 ){
+
+    odd.push(numbers[i])
+}
+
+
+
+}
+
+document.write(`<h4>even : <br>  ${even}</h4>`)
+
+document.write(`<h4>odd : <br>  ${odd}</h4>`)
+
+
+document.write(`<h4>Series : <br>  ${series}</h4><hr>`)
+
+
+ /////////////////   task 07
+
+ let names = ["cake", "apple", "cookie", "chips","patties"];
+let user4 = prompt("Welcome To the Special bakery !1" );
+ 
+let index = names.indexOf(user4)
+
+if( index !== -1){
+
+    document.write(`<h3>${user4} is avaiaable at index ${index +1} in our bakery</h3><hr>`);
+
+
+}else{
+
+    document.write(`<h3>we are sorry ${user4} is not available </h3><hr>`);    
+}
+
+
+//// let names = ["cake", "apple", "cookie", "chips","patties"];
+
+//// let user6 = prompt("wds");
+//// let flag = false ;
+
+//// for(let i = 0 ; i <names.length ; i++){
+
+
+//// if ( names[i] === user6){
+
+////     document.write(`Yes, '${user6}' is found in the list at index ${i}.`);
+//// flag = true ;
+//// break ;
+//// }
+
+//// }
+
+
+//// if(!flag){
+////     document.write(`No, '${user6}' is not found in the list.`);
+//// }
+
+/////////////////   task 08
+
+
+
+
+
+
+let b = [24, 53, 78, 91, 12];
+
+document.write(`<h3>numbers ; ${b.join(" ")}</h3>`)
+let max = b[0];
+
+for(let i = 0 ; i<b.length ; i++){
+
+    if(b[i] > max){
+
+        max = b[i] ;
+    }
+}
+
+document.write(`<h3> the larger number;  ${max}</h3> <hr>`)
+
+
+
+let c =  [24, 53, 78, 91, 12];
+
+// console.log(Math.min.apply(null,c));
+
+
+document.write(`<h3>numbers ; ${c.join(" ")}</h3>`)
+let max2 = c[0];
+
+for(let i = 0 ; i<b.length ; i++){
+
+    if(c[i] < max2){
+
+        max2 = c[i] ;
+    }
+}
+
+document.write(`<h3> the smaller number;  ${max2}</h3> <hr>`)
+
+
+
+
+
+
+
+
+let num = [];
+
+
+for (let i = 0 ; i <= 100 ; i++){
+
+if(i%5===0){
+    num.push(i)
+}
+}
+num.shift()
+document.write(`<h3> ${num}</h3>`)
+
+
+
+
+
+</script>
+
+</body>
+</html>
